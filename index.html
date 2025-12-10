@@ -12,8 +12,26 @@
   </head>
 
   <body>
-    <main>
-      
+    <main class="login-container">
+      <div class="login-box">
+        <img src="./assets/media/work-forge.png" alt="WorkForge Logo" class="logo">
+
+        <p class="subtitle">Sign in to your account</p>
+
+        <form class="login-form">
+          <label for="username">Username</label>
+
+          <input id="username" type="text" placeholder="Enter your username" required>
+
+          <label for="password">Password</label>
+
+          <input id="password" type="password" placeholder="Enter your password" required>
+
+          <button type="submit" class="login-btn">Login</button>
+
+          <p class="error-msg" id="error"></p>
+        </form>
+      </div>
     </main>
   </body>
 </html>
