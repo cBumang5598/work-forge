@@ -1,4 +1,5 @@
 "use strict";
+
 const peopleContainer = document.getElementById("peopleList");
 
 function createUserCard(user) {
@@ -79,3 +80,10 @@ function addPost() {
 
 
 document.getElementById("postBtn").addEventListener("click", addPost);
+
+const logoutBtn = document.querySelector("#logoutBtn");
+
+logoutBtn.addEventListener("click", function () {
+    localStorage.removeItem("logged_in");
+    window.location.href = "index.html";
+});
