@@ -49,12 +49,8 @@ body {
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #0077b5;
-    background: #e6f2f9;
-    padding: 4px 10px;
-    border-radius: 6px;
+  height: 70px;
+  width: 70px;
 }
 
 .search-box {
