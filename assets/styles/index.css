@@ -75,3 +75,9 @@ body {
 .login-btn:hover {
   background: #324d82;
 }
+
+.sign-up {
+  text-align: center; 
+  margin-top: 10px;
+  font-size: 13px;
+}
