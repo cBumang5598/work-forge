@@ -23,7 +23,23 @@ body {
 }
 
 .right-section {
+    display: flex;
     justify-self: end;
+}
+
+.logout-btn {
+    margin-left: 15px;
+    padding: 5px 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #d93636;
+    cursor: pointer;
 }
 
 .left-section {
