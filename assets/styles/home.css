@@ -85,7 +85,7 @@ body {
 .search-btn {
     height: 36px;
     padding: 0 16px;
-    background: #0077b5;
+    background: #4b6ea8;
     color: white;
     border: none;
     border-radius: 6px;
@@ -95,7 +95,7 @@ body {
 }
 
 .search-btn:hover {
-    background: #005582;
+    background: #3a5785;
 }
 
 .nav-links {
