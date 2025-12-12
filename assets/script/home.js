@@ -81,7 +81,6 @@ function addPost() {
 
 document.getElementById("postBtn").addEventListener("click", addPost);
 
-// LOGOUT BUTTON
 const logoutBtn = document.querySelector("#logoutBtn");
 
 logoutBtn.addEventListener("click", function () {
