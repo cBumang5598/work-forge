@@ -53,11 +53,18 @@ imageInput.addEventListener("change", function () {
 
 function addPost() {
     const text = postInput.value.trim();
-
     if (!text && !uploadedImage) return;
 
     const newPost = document.createElement("div");
     newPost.classList.add("post");
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-post-btn");
+    deleteBtn.innerHTML = "x";
+    deleteBtn.addEventListener("click", function() {
+        newPost.remove();
+    });
+    newPost.appendChild(deleteBtn);
 
     if (text) {
         const p = document.createElement("p");
@@ -86,4 +93,56 @@ const logoutBtn = document.querySelector("#logoutBtn");
 logoutBtn.addEventListener("click", function () {
     localStorage.removeItem("logged_in");
     window.location.href = "index.html";
+});
+
+
+
+
+const avatarBtn = document.getElementById("avatarBtn");
+const modal = document.getElementById("profileModal");
+
+const modalAvatar = document.getElementById("modalAvatar");
+const modalName = document.getElementById("modalName");
+const modalEmail = document.getElementById("modalEmail");
+const modalLocation = document.getElementById("modalLocation");
+
+const avatarUpload = document.getElementById("avatarUpload");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const modalLogoutBtn = document.getElementById("modalLogoutBtn");
+
+
+avatarBtn.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+
+  modalAvatar.src =
+    document.querySelector(".profile-card .avatar").src;
+
+  modalName.textContent =
+    document.querySelector(".profile-card h2").textContent;
+
+  modalLocation.textContent = "Canada";
+
+  modalEmail.textContent = "linkedin.com/in/Anna Cruz";
+});
+
+avatarUpload.addEventListener("change", function () {
+  const file = this.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    modalAvatar.src = reader.result;
+    document.querySelector(".profile-card .avatar").src = reader.result;
+    avatarBtn.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+modalLogoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("logged_in");
+  window.location.href = "index.html";
 });

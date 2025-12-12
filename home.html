@@ -39,7 +39,7 @@
     </nav>
 
     <div class="right-section">
-        <img src="https://randomuser.me/api/portraits/women/20.jpg" class="header-avatar">
+        <img src="https://randomuser.me/api/portraits/women/20.jpg" class="header-avatar" id="avatarBtn">
 
         <button id="logoutBtn" class="logout-btn">Logout</button>
     </div>
@@ -102,5 +102,42 @@
 
     </div>
 </div>
+
+
+<div id="profileModal" class="modal hidden">
+  <div class="modal-content profile-modal">
+
+    <img id="modalAvatar" class="modal-avatar">
+
+    <div class="profile-fields">
+      <div class="field-row">
+        <span class="field-label">Name:</span>
+        <span class="field-value" id="modalName"></span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Email:</span>
+        <span class="field-value" id="modalEmail"></span>
+      </div>
+
+      <div class="field-row">
+        <span class="field-label">Location:</span>
+        <span class="field-value" id="modalLocation"></span>
+      </div>
+    </div>
+
+    <div class="avatar-upload">
+      <label>Change Avatar</label>
+      <input type="file" id="avatarUpload" accept="image/*">
+    </div>
+
+    <div class="modal-actions">
+      <button id="closeModalBtn">Close</button>
+      <button id="modalLogoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
