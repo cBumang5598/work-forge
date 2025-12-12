@@ -1,4 +1,9 @@
 "use strict";
+
+if (localStorage.getItem("logged_in") !== "true") {
+    window.location.href = "index.html";
+}
+
 const peopleContainer = document.getElementById("peopleList");
 
 function createUserCard(user) {
