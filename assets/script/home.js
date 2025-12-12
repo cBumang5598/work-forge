@@ -1,9 +1,5 @@
 "use strict";
 
-if (localStorage.getItem("logged_in") !== "true") {
-    window.location.href = "index.html";
-}
-
 const peopleContainer = document.getElementById("peopleList");
 
 function createUserCard(user) {
@@ -84,3 +80,11 @@ function addPost() {
 
 
 document.getElementById("postBtn").addEventListener("click", addPost);
+
+// LOGOUT BUTTON
+const logoutBtn = document.querySelector("#logoutBtn");
+
+logoutBtn.addEventListener("click", function () {
+    localStorage.removeItem("logged_in");
+    window.location.href = "index.html";
+});
